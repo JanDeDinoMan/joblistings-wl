@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
- .header{
-    background-color:  hsl(180, 44%, 65%);
-    display: flex;
+ div#filterbar{
+    position: absolute;
+    top: calc(80%);
+    width: 85%;
+    margin-left: 7.5%;
  }
 
- div{
-   position: relative;
+ div#list{
+    position: absolute;
+    top: 130%;
+    width: 85%;
+    margin-left: 7.5%;
  }

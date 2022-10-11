@@ -1,0 +1,25 @@
+<div class="main">
+    <div id="profile">
+    <div *ngIf="listingData.featured" id="feature-mark"></div>
+        <img id="profile-image" src="../../../assets/account.svg">
+    </div>
+    <div class="details">
+        <div id="emblems-row">
+            <div id="company">{{listingData.company}}</div>
+            <div class="emblem" [ngStyle]="{'background-color':'hsl(180, 29%, 50%)'}" *ngIf="listingData.new">NEW!</div>
+            <div class="emblem" [ngStyle]="{'background-color':'hsl(180, 14%, 20%)'}" *ngIf="listingData.featured">FEATURED</div>
+        </div>
+        <p id="position">{{listingData.position}}</p>
+        <p id="sub">{{listingData.postedAt}} * {{listingData.contract}} * {{listingData.location}}</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="selectors">
+        <app-selector [label]="listingData.role" (click)="filterClicked.emit(listingData.role)"></app-selector>
+        <app-selector [label]="listingData.level" (click)="filterClicked.emit(listingData.level)"></app-selector>
+        <app-selector *ngFor="let lang of listingData.languages" [label]="lang" (click)="filterClicked.emit(lang)">
+        </app-selector>
+        <app-selector *ngFor="let tool of listingData.tools" [label]="tool" (click)="filterClicked.emit(tool)">
+        </app-selector>
+
+    </div>
+</div>

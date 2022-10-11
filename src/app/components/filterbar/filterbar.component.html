@@ -1,0 +1,5 @@
+<div id="container">
+    <app-item *ngFor="let filter of filters" [label]="filter" (removeClicked)="onRemove($event)"></app-item>
+    <div id="spacer"></div>
+    <div id="clearbutton" *ngIf="filters.length > 0" (click)="onClear()">Clear</div>
+</div>

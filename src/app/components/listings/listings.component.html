@@ -1,0 +1,6 @@
+<div id="filterbar">
+    <app-filterbar #appfilterbar (newFilters)="onNewFilters($event)"></app-filterbar>
+</div>
+<div id="list">
+    <app-listing *ngFor="let listing of listings" [listingData]="listing" (filterClicked)="appfilterbar.addFilter($event)"></app-listing>
+</div>

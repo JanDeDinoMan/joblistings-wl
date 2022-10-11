@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+html, body{
+    font-family:League Spartan;
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(180, 29%, 50%);
+}
+body{
+    max-width: 1440px;
+    background-color:  hsl(175, 52%, 96%);
+    margin: auto
+}
+
+#header{
+    object-fit: fill;
+    width: 100%;
+    background-color: hsl(180, 29%, 50%);
+}

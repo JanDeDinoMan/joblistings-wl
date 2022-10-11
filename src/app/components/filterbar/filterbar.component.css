@@ -14,11 +14,33 @@
  * limitations under the License.
  */
 
- .header{
-    background-color:  hsl(180, 44%, 65%);
-    display: flex;
- }
 
- div{
-   position: relative;
- }
+#container{
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0px;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    margin: 0px;
+    align-items: center;
+}
+
+#spacer{
+    flex-grow: 1;
+    height: 0px;
+}
+
+#clearbutton{
+    color: hsl(180, 29%, 50%);
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    padding-right: 18px;
+    font-weight: 700;
+}
+
+#clearbutton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
