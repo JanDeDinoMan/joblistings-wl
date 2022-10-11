@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { JobListing } from 'src/app/JobListing';
+import { JobService } from 'src/app/services/job.service';
 
 @Component({
   selector: 'app-listing',
@@ -11,13 +12,13 @@ export class ListingComponent implements OnInit {
   @Input() listingData!: JobListing;
   @Output() filterClicked = new EventEmitter();
 
-  constructor() { }
+  constructor(private jobService: JobService) { }
 
   ngOnInit(): void {
   }
 
-  onClick(label: string) {
-    console.log("CLCIK: " + label);
+  getPath(): string{
+    return this.jobService.getImagePath(this.listingData.logo);
   }
 
 }

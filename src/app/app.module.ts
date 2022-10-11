@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ListingsComponent } from './components/listings/listings.component';
 import { ListingComponent } from './components/listing/listing.component';
@@ -18,7 +18,8 @@ import { ItemComponent } from './components/filterbar/item/item.component';
     ItemComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

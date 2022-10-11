@@ -1,7 +1,7 @@
 <div class="main">
     <div id="profile">
     <div *ngIf="listingData.featured" id="feature-mark"></div>
-        <img id="profile-image" src="../../../assets/account.svg">
+        <img id="profile-image" src="{{getPath()}}">
     </div>
     <div class="details">
         <div id="emblems-row">
@@ -10,7 +10,7 @@
             <div class="emblem" [ngStyle]="{'background-color':'hsl(180, 14%, 20%)'}" *ngIf="listingData.featured">FEATURED</div>
         </div>
         <p id="position">{{listingData.position}}</p>
-        <p id="sub">{{listingData.postedAt}} * {{listingData.contract}} * {{listingData.location}}</p>
+        <p id="sub">{{listingData.postedAt}} ⸱ {{listingData.contract}} ⸱ {{listingData.location}}</p>
     </div>
     <div class="spacer"></div>
     <div class="selectors">

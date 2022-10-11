@@ -14,7 +14,7 @@ export class ListingsComponent implements OnInit {
   constructor(private jobService: JobService) { }
 
   ngOnInit(): void {
-    this.listings = this.jobService.getJobs();
+    this.jobService.getJobs().subscribe((r) => this.listings = r);
   }
 
   onNewFilters($event: string[]) {
