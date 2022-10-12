@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http'
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http'
 import { JobListing } from '../JobListing';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -12,8 +12,14 @@ export class JobService {
 
   constructor(private http:HttpClient) { }
 
-  getJobs(): Observable<JobListing[]>{
-    return this.http.get<JobListing[]>(this.apiURL + "listings");
+  getJobs(filters?: string[]): Observable<JobListing[]>{
+
+    let params = "";
+    if (typeof filters !== 'undefined'){
+      params = "?" + "filters=" + filters.toString();
+    }
+
+    return this.http.get<JobListing[]>(this.apiURL + "listings" + params);
   }
 
   getImagePath(path: string): string{

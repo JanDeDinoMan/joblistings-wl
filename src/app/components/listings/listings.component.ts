@@ -18,7 +18,7 @@ export class ListingsComponent implements OnInit {
   }
 
   onNewFilters($event: string[]) {
-    console.log($event);
+    this.jobService.getJobs($event).subscribe((r) => this.listings = r);
   }
     
 
