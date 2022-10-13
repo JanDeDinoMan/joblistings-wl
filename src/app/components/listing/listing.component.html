@@ -13,7 +13,7 @@
         <p id="sub">{{listingData.postedAt}} ⸱ {{listingData.contract}} ⸱ {{listingData.location}}</p>
     </div>
     <div class="spacer"></div>
-    <div class="selectors">
+    <div *ngIf="!mobile" class="selectors">
         <app-selector [label]="listingData.role" (click)="filterClicked.emit(listingData.role)"></app-selector>
         <app-selector [label]="listingData.level" (click)="filterClicked.emit(listingData.level)"></app-selector>
         <app-selector *ngFor="let lang of listingData.languages" [label]="lang" (click)="filterClicked.emit(lang)">

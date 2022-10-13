@@ -14,16 +14,25 @@
  * limitations under the License.
  */
 
- div#filterbar{
-    position: absolute;
-    top: calc(80%);
-    width: 85%;
-    margin-left: 7.5%;
- }
+div#filterbar {
+   position: absolute;
+   top: calc(100% - 30px);
+   width: 85%;
+   margin-left: 7.5%;
+}
 
- div#list{
-    position: absolute;
-    top: 130%;
-    width: 85%;
-    margin-left: 7.5%;
- }
+div#list {
+   position: absolute;
+   top: calc(100% + 50px);
+   width: 85%;
+   margin-left: 7.5%;
+}
+
+
+@media screen and (max-width: 376px) {  
+   div#list{
+      width: 95%;
+      margin-left: 2.5%;
+      top: calc(100% + 20px);
+   }
+} 

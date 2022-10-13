@@ -12,6 +12,7 @@ html, body{
 }
 body{
     max-width: 1440px;
+    min-width: 375px;
     background-color:  hsl(175, 52%, 96%);
     margin: auto
 }

@@ -67,6 +67,7 @@
 #company{
     font-weight: bold;
     color: hsl(180, 29%, 50%);
+    white-space: nowrap;
 }
 
 #position{
@@ -74,10 +75,13 @@
     color: hsl(180, 29%, 50%);
     font-size: 20px;
     margin-bottom: 6px;
+    white-space: nowrap;
+
 }
 
 #sub{
     color: hsl(180, 8%, 52%);
+    white-space: nowrap;
 }
 
 

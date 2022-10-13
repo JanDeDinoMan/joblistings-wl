@@ -12,9 +12,15 @@ export class ListingComponent implements OnInit {
   @Input() listingData!: JobListing;
   @Output() filterClicked = new EventEmitter();
 
+  mobile: boolean = false;
+
   constructor(private jobService: JobService) { }
 
   ngOnInit(): void {
+
+    //If the screen with is small enough to be mobile hide filter buttons.
+    this.mobile = window.screen.width <= 375;
+
   }
 
   getPath(): string{
